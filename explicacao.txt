@@ -1,0 +1,26 @@
+### Testes Unitários
+    > Testes?
+        - Só fazem sentido quando se tem uma dificuldade ao 
+        testar coisas manualmente.  
+        - Existem metodologias pré-escritas de teste
+        - TDD(Tests Driven Development): Desenvolvido dirigido a testes.
+            -- Os testes são feitos antes para depois iniciar a aplicação.
+            -- Independente da metodologia, consegue-se ter uma cobertura boa de testes.
+
+    > Principais tipos de testes
+        - Unitários: Testam unidades, uma parte muito isolada da aplicação e não 
+        como funciona no contexto aplicado. Estão na base da piramide.
+        - Integração: São testes que testam como váris unidades se comunicam juntas.
+        - End-To-End (e2e): Testes que simulam como o usuário interage com a sua 
+        aplicação. Tenta repetir ações que o usuário faria.
+
+        @ Não é necessário utilizar todos os tipos de testes. Vária do momento da 
+        aplicação
+
+        @ mocks são simuladores de uma ação que no mundo real vai acontecer de outra forma.
+
+    > Instalação Jest
+        - npm i jest -D
+        - npx jest --init
+        - npm i ts-node -D (para o jest conseguir entender a config dele em ts)
+        - npm i types/jest -D
