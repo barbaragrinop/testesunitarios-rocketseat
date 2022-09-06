@@ -26,7 +26,7 @@ function List({ initialItems }: ListProps) {
 
             <ul>
                 {list.map(item => (
-                    <li key={item}>
+                    <li data-testeid="item-from-list" key={item}>
                         {item}
                         <button onClick={() => removeFromList(item)}>Remover</button>
 
