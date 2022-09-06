@@ -1,11 +1,5 @@
-import { useState } from 'react'
+import List from "./components/List";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <h1>Hello world</h1>
-  )
+export default function App() {
+  return <List initialItems={['Barbara', 'Thaina', 'Millena', 'Victor']} />
 }
-
-export default App

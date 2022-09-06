@@ -23,4 +23,41 @@
         - npm i jest -D
         - npx jest --init
         - npm i ts-node -D (para o jest conseguir entender a config dele em ts)
-        - npm i types/jest -D
+        - npm i @types/jest -D
+        - npm i @swc/core @swc/jest -D (converte um código que está em um formato, para outro)
+        - npm install -D jest-environment-jsdom (para compilar o teste)
+        - npm i @testing-library/react @testing-library/jest-dom @testing-library/user-event -D (para testes)
+        
+        @ mudar no package.json  >>  "test": "jest --watchAll" (para renderizar automaticamente)
+
+        - criar a pasta test/setup.js
+        - em jest.config, alterar assim:
+
+            setupFilesAfterEnv: [
+                '<rootDir>/src/test/setup.ts'
+            ], 
+        para indicar onde está o arquivo que vai entender o dom
+
+        
+    > Explicações
+        getAll: retorna todos os elementos que satisfaçam 
+        getBy: retorna 1
+        query: não falham caso não encontre o elemento
+            quer testar se um elemento está em tela ou não?
+                usa o query. pq ele não falha caso não encontre.
+        find: quase a mesma coisa que o get, PORÉM, espera o elemento aparecer em tela
+
+        !!NÃO SE PODE USAR SEMPRE O GET
+    > Comandos para não esquecer
+
+    test('sum', () => {
+        const { getByText } = render(<App />) //buscando de um component
+        expect(getByText('Hello world')).toHaveAttribute('class', 'test')
+    })
+
+    it() x test()
+
+    @ it faz parte da leitura do código, como: it should render (isso deveria renderizar...)
+        it('should render list items', () => {
+            
+        })
